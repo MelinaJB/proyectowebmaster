@@ -1,0 +1,254 @@
+/*font-family: 'Neucha', cursive;
+font-family: 'Hind', sans-serif;
+font-family: 'Rampart One', cursive;*/
+
+header{
+    background-color: lightblue;
+    color:white; 
+    display: block;
+    overflow: hidden;
+}
+
+.cabezal img{
+    padding: 25px;
+    float: left;
+}
+
+.cabezal div h1{
+    font-family: 'Neucha', cursive;
+    display: inline-flex;
+    font-size: 50px; 
+    margin-top: 50px;
+    position: absolute;
+}
+@media (min-width:400px){
+    .cabezal div h1{
+        display:block;
+        margin-left: 200px;
+    }
+}
+
+nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+nav ul li{
+    display: inline-block;
+    width: 19.23%;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    display: block;
+    text-align: center;
+    padding: 6px 0;
+}
+
+nav ul li a:hover{
+    color: white;
+    background-color: lightskyblue;
+}
+
+nav ul li a.activo{
+    color: lightskyblue;
+    background-color: white;
+}
+
+footer{
+    background-color: lightblue;
+    color: white;
+    font-weight: bold;
+    margin-top: 15px;
+    height: 100px;
+    width: 100%;
+    font-size: 15px;
+    text-align: center;
+    clear: both;
+}
+ 
+footer p{
+   padding-top: 40px ;
+}
+
+nav{
+    margin-bottom: 25px;
+}
+
+
+/*Inicio nosotros*/
+.nosotros{
+    display: block;
+}
+.nosotros h2{
+    font-family: 'Neucha', cursive;
+    margin-left: 30px;
+    padding-top: 15px;
+}
+.nosotros p{
+    margin-left: 30px;
+}
+.imgpresentacion{
+    padding:15px
+}
+
+.wrapper {
+    height: 100px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .typing-demo {
+    width: 33ch;
+    animation: typing 3s steps(33), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: monospace;
+    font-size: 2em;
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0
+    }
+  }
+      
+  @keyframes blink {
+    50% {
+      border-color: transparent
+    }
+  }
+
+/*Fin nosotros - Inicio contacto*/
+textarea{
+    resize: none;
+}
+
+.redes h3{
+    font-family: 'Neucha', cursive;
+}
+
+.redes ul{
+    list-style: none;
+}
+
+.redes ul li a{
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+}
+
+.redes ul li a:hover{
+    color: rgb(209, 173, 230);
+}
+/*Fin contacto - Inicio tips*/
+.boton{
+    background-color: rgb(209, 173, 230);
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    color:white;
+    font-family: 'Neucha', cursive;
+    font-weight: 800;
+}
+
+.temporadas h2{
+    font-family: 'Neucha', cursive;
+    color: rgb(206, 153, 236);
+    text-align: center;
+}
+.temporadas h4, h5{
+    font-family: 'Neucha', cursive;
+}
+
+.oficiales ul li{
+    list-style: none;
+}
+
+.oficiales ul li a{
+    text-decoration: none;
+    font-weight: lighter;
+    color: black;
+}
+
+.oficiales ul li a:hover{
+    font-weight: bold;
+    color: black;
+}
+
+.ministerio{
+    color: black;
+    font-weight: lighter;
+    text-decoration: none;
+}
+
+.ministerio:hover{
+    font-weight: bold;
+    color: black;
+}
+
+/*Fin tips-Inicio propuestas*/
+
+.navpropuestas{
+    margin:0;
+}
+
+.titulosprop{
+    height: 100px;
+    text-align: center;
+    font-family: 'Rampart One', cursive;
+    background-color: rgb(162, 201, 214);
+    padding-top: 20px;
+    margin-top: 0;
+}
+
+.titulosprop h1{
+    color: white;
+    margin-bottom: 0;
+}
+
+.propuestas h5, a{
+    font-family: 'Neucha', cursive;
+    font-weight: 800;
+}
+
+.volver{
+    text-decoration: none;
+    padding: 10px;
+    color: black;
+}
+
+.volver:hover{
+    color: white;
+}
+
+.top{
+    text-decoration: none;
+    color: rgb(209, 173, 230);
+    display: inline-block;
+    margin-bottom: 20px;
+}   
+
+.barra{
+    background-color: lightblue;
+    margin-bottom:25px;
+}
+
+.divisores{
+    font-family: 'Neucha', cursive;
+}
+
+.comollegar ul{
+    padding: 0;
+}
+.comollegar ul li{
+    list-style: none;
+}
+
+.separacion{
+    margin-top: 15px;
+}
