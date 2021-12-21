@@ -1,49 +1,56 @@
- <main>
-    <div class="container">
-      <div class="row">
-        <div class="col-6">
-          <form action="/contacto" method="post" class="row g-3">
+<main>
+  <div class="container">
+    <div class="row">
+      <div class="col-6">
+        <form action="/contacto" method="post" class="row g-3">
 
-            <div class="col-md-6">
-              <label for="inputPassword4" class="form-label">Nombre</label>
-              <input type="text" class="form-control" id="inputPassword4" name="nombre">
-            </div>
+          <div class="col-md-6">
+            <label for="inputPassword4" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="inputPassword4" name="nombre">
+          </div>
 
-            <div class="col-md-6">
-              <label for="inputEmail4" class="form-label">Email</label>
-              <input type="email" class="form-control" id="inputEmail4" placeholder="ejemplo@xxxxxx.com" name="email">
-            </div>
+          <div class="col-md-6">
+            <label for="inputEmail4" class="form-label">Email</label>
+            <input type="email" class="form-control" id="inputEmail4" placeholder="ejemplo@xxxxxx.com" name="email">
+          </div>
 
-            <div class="col-md-12">
-              <label for="inputPassword4" class="form-label">Asunto</label>
-              <input type="text" class="form-control" id="inputPassword4" placeholder="Consulta/Cotización/Otros"name="asunto">
-            </div>
+          <div class="col-md-12">
 
-            <div class="col-12">
-              <label for="inputAddress" class="form-label">Comentarios</label>
-              <textarea name="comentarios" class="form-control" id="inputAddress" cols="10" rows="5"></textarea>
-            </div>
+            <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="asunto">
+              <option selected>Elegir asunto</option>
+              <option value="Consulta">Consulta</option>
+              <option value="Cotización">Cotización</option>
+              <option value="Otros">Otros</option>
+            </select>
+            {{!-- <input type="text" class="form-control" id="inputPassword4" placeholder="Consulta/Cotización/Otros"
+              name="asunto"> --}}
+          </div>
 
-            <div class="col-12">
-              <button type="submit" class="btn boton">Enviar</button>
-            </div>
+          <div class="col-12">
+            <label for="inputAddress" class="form-label">Comentarios</label>
+            <textarea name="comentarios" class="form-control" id="inputAddress" cols="10" rows="5"></textarea>
+          </div>
 
-          </form>
+          <div class="col-12">
+            <button type="submit" class="btn boton">Enviar</button>
+          </div>
+
+        </form>
 
         <p>{{message}}</p>
 
-        </div>
-        <div class="col-6 redes">
-          <h3>Encontranos también en:</h3>
-          <div>
-            <ul>
-              <li><a href="https://instagram.com" target="blank"><i class="fab fa-instagram"></i> Instagram</a></li>
-              <li><a href="https://web.whatsapp.com" target="blank"><i class="fab fa-whatsapp"></i> Whatsapp</a></li>
-              <li><a href="https://twitter.com" target="blank"><i class="fab fa-twitter"></i> Twitter</a></li>
+      </div>
+      <div class="col-6 redes">
+        <h3>Encontranos también en:</h3>
+        <div>
+          <ul>
+            <li><a href="https://instagram.com" target="blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+            <li><a href="https://web.whatsapp.com" target="blank"><i class="fab fa-whatsapp"></i> Whatsapp</a></li>
+            <li><a href="https://twitter.com" target="blank"><i class="fab fa-twitter"></i> Twitter</a></li>
 
-            </ul>
-          </div>
+          </ul>
         </div>
       </div>
     </div>
-  </main>
+  </div>
+</main>
