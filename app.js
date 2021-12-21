@@ -5,12 +5,15 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 require('dotenv').config();
+var session = require ('express-session');
 
-var indexRouter = require('./routes/index');//linea25
-var tipsRouter = require('./routes/tips'); //linea26
-var propuestasRouter = require('./routes/propuestas'); //linea27
-var nosotrosRouter = require('./routes/nosotros'); //linea28
-var contactoRouter = require('./routes/contacto'); //linea29
+var indexRouter = require('./routes/index');//linea28
+var tipsRouter = require('./routes/tips'); //linea29
+var propuestasRouter = require('./routes/propuestas'); //linea30
+var nosotrosRouter = require('./routes/nosotros'); //linea31
+var contactoRouter = require('./routes/contacto'); //linea32
+var loginRouter = require('./routes/admin/login');//linea33
+var adminPropuestasRouter = require('./routes/admin/propuestas');//linea34
 
 var app = express();
 
@@ -24,11 +27,33 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);//linea7
-app.use('/tips', tipsRouter); //linea8
-app.use('/propuestas', propuestasRouter); //linea9
-app.use('/nosotros', nosotrosRouter); //linea10
-app.use('/contacto', contactoRouter); //linea11
+app.use(session({
+  secret: 'melinajoloidovskybor',
+  resave: false,
+  saveUninitialized: true,
+  cookie: { maxAge: 600000} //se le pone uno grande para trabajar dsp se puede modificar
+}))
+
+secured = async function(req, res, next){
+  try{
+    console.log(req.session.id_usuario);
+    if(req.session.id_usuario){
+      next()
+    }else{
+      res.redirect('/admin/login')
+    }
+  }catch(error){
+    console.log(error)
+  }
+}
+
+app.use('/', indexRouter);//linea9
+app.use('/tips', tipsRouter); //linea10
+app.use('/propuestas', propuestasRouter); //linea11
+app.use('/nosotros', nosotrosRouter); //linea12
+app.use('/contacto', contactoRouter); //linea13
+app.use('/admin/login', loginRouter);//linea14
+app.use('/admin/propuestas', secured, adminPropuestasRouter);//linea15
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
