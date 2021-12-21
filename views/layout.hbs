@@ -30,11 +30,11 @@
   <div class="container-fluid" style="background-color: rgb(162, 201, 214)">
     <nav>
       <ul>
-        <li><a href="/">Inicio</a></li>
-        <li><a href="/tips">Tips de viaje</a></li>
-        <li><a href="/propuestas">Propuestas</a></li>
-        <li><a href="/nosotros">Nosotros</a></li>
-        <li><a href="/contacto">Contacto</a></li>
+        <li><a href="/" class="{{#if isHome}}activo{{/if}}">Inicio</a></li>
+        <li><a href="/tips" class="{{#if isTips}}activo{{/if}}">Tips de viaje</a></li>
+        <li><a href="/propuestas" class="{{#if isPropuestas}}activo{{/if}}">Propuestas</a></li>
+        <li><a href="/nosotros" class="{{#if isNosotros}}activo{{/if}}">Nosotros</a></li>
+        <li><a href="/contacto" class="{{#if isContacto}}activo{{/if}}">Contacto</a></li>
 
       </ul>
     </nav>
