@@ -14,6 +14,12 @@ var nosotrosRouter = require('./routes/nosotros'); //linea31
 var contactoRouter = require('./routes/contacto'); //linea32
 var loginRouter = require('./routes/admin/login');//linea33
 var adminPropuestasRouter = require('./routes/admin/propuestas');//linea34
+var propuestasBsAsRouter = require('./routes/propuestasbsas');
+var propuestasCuyoRouter = require('./routes/propuestascuyo');
+var propuestasLitoralRouter = require ('./routes/propuestaslitoral');
+var propuestasNorteRouter = require ('./routes/propuestasnorte');
+var propuestasPampaRouter = require('./routes/propuestaspampa');
+var propuestasPatagoniaRouter = require('./routes/propuestaspatagonia');
 
 var app = express();
 
@@ -54,6 +60,12 @@ app.use('/nosotros', nosotrosRouter); //linea12
 app.use('/contacto', contactoRouter); //linea13
 app.use('/admin/login', loginRouter);//linea14
 app.use('/admin/propuestas', secured, adminPropuestasRouter);//linea15
+app.use('/propuestasbsas', propuestasBsAsRouter);
+app.use('/propuestascuyo', propuestasCuyoRouter);
+app.use('/propuestaslitoral', propuestasLitoralRouter);
+app.use('/propuestasnorte', propuestasNorteRouter);
+app.use('/propuestaspampa', propuestasPampaRouter);
+app.use('/propuestaspatagonia', propuestasPatagoniaRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
